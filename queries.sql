@@ -1,5 +1,5 @@
 ## Part 1: Test it with SQL
-id: it
+id: int
 employer: varchar
 name: varchar
 skills: varchar

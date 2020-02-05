@@ -1,25 +1,22 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.persistence.Entity;
 
 @Entity
 public class Employer extends AbstractEntity {
 
-    @OneToMany(mappedBy = "employer")
-//    @NotBlank(message = "Location is required")
+//    @OneToOne
     @Valid
     @NotNull
-    @Size(min = 3, max = 50, message = "Name must be between 3 and 50 characters")
+    @Size(min = 3, max = 50, message = "Location must be between 3 and 50 characters")
     private String location;
 
-    public Employer(){}
+    public Employer() {}
 
     public String getLocation() {
         return location;
@@ -28,4 +25,8 @@ public class Employer extends AbstractEntity {
     public void setLocation(String location) {
         this.location = location;
     }
+
+
+
+
 }
