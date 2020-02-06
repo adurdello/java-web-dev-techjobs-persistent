@@ -5,6 +5,9 @@ name: varchar
 skills: varchar
 
 ## Part 2: Test it with SQL
+SELECT *
+FROM techjobs.employer
+WHERE (name = "St. Louis City")
 
 ## Part 3: Test it with SQL
 
